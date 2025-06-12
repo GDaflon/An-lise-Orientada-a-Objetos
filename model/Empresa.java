@@ -52,4 +52,9 @@ public class Empresa {
     public List<Agente> getAgentes() {
         return agentes;
     }
+    public void validarEmpresa() {
+        if (cnpj == null || cnpj.isEmpty()) {
+            throw new IllegalArgumentException("CNPJ inválido");
+        }
+    }
 }
