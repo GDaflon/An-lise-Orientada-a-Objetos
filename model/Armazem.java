@@ -80,4 +80,9 @@ public class Armazem {
     public List<Transporte> getTransportesDestino() {
         return transportesDestino;
     }
+    public void validarArmazem() {
+        if (nomeArmazem == null || nomeArmazem.isEmpty()) {
+            throw new IllegalArgumentException("Nome do armazém inválido");
+        }
+    }
 }
