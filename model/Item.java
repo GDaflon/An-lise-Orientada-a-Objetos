@@ -32,4 +32,9 @@ public class Item {
     public Produto getProduto() {
         return produto;
     }
+    public void validarItem() {
+        if (nomeItem == null || nomeItem.isEmpty()) {
+            throw new IllegalArgumentException("Nome do item inválido");
+        }
+    }
 }
