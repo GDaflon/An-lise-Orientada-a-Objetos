@@ -80,4 +80,9 @@ public class Cidade {
     public List<Armazem> getArmazens() {
         return armazens;
     }
+    public void validarCidade() {
+        if (nomeCidade == null || nomeCidade.isEmpty()) {
+            throw new IllegalArgumentException("Nome da cidade inválido");
+        }
+    }
 }
