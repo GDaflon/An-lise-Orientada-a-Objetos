@@ -96,4 +96,9 @@ public class Transporte {
     public List<Item> getItens() {
         return itens;
     }
+    public void validarTransporte() {
+        if (dataSaida == null || dataChegada == null) {
+            throw new IllegalArgumentException("Datas inválidas no transporte");
+        }
+    }
 }
