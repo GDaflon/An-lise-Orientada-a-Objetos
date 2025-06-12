@@ -67,4 +67,9 @@ public class Agente {
     public List<Transporte> getTransportes() {
         return transportes;
     }
+    public void validarAgente() {
+        if (cpf == null || cpf.isEmpty()) {
+            throw new IllegalArgumentException("CPF inválido");
+        }
+    }
 }
