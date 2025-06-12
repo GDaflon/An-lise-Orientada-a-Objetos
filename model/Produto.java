@@ -76,4 +76,9 @@ public class Produto {
     public List<Item> getItens() {
         return new ArrayList<>(itens); // Retorna uma cópia para proteger a composição
     }
+     public void validarProduto() {
+        if (nomeProduto == null || nomeProduto.isEmpty()) {
+            throw new IllegalArgumentException("Produto inválido");
+        }
+    }
 }
